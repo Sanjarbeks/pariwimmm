@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Pari uchun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('pari.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Great Vibes', cursive;
+            color: white;
+            overflow: hidden;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 40px;
+        }
+        #name {
+            font-size: 5em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            width: 0;
+            animation: typing 2s steps(10) 1s forwards, blink .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 8ch }
+        }
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+        .message p {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: var(--delay);
+            font-size: 1.7em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .snow {
+            position: fixed;
+            top: -100px;
+            z-index: 0;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+        audio {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <div id="name">Pari</div>
+        <div class="message" id="message">
+            
+<p>So‘nggi kunlarda sening qalbingda og‘riq borligini sezdim. Menga bo‘lgan ishonchingda shubha paydo bo'layotganini sezdim, va bu menga ham taskin bermayapti. Men seni naqadar qadrlashimni, qanday bebaho inson ekaningni tushuntirib bera oladigan so‘z yo‘q. Sen faqat hayotimning bir qismi emas, sen uning eng muhim sababisan.</p>
+<p>Ishon, men har kuni sen haqingda o‘ylayman. Qancha band bo‘lsam ham, charchaganimda ham, fikrim sendan uzoqlashmaydi, yuragim faqat sen tomonga tortadi. Sen uchun vaqt ajratish – bu majburiyat emas, bu baxtim. Hayotimda kimni tanlash kerak bo‘lsa – men tanlovsiz seni tanlayman. Har qanday holatda.</p>
+<p>Bizning munosabatlarimiz oldingidek bo‘lishini emas, undan-da go‘zalroq bo‘lishini istayman. Sen bilan kechgan har bir lahza — menga ilhom, quvonch, umid. Va bu lahzalarni hali oldinda minglab marta yana birga boshdan kechirishni xohlayman. Men seni faqat o‘tmishdagi go‘zal lahzalar bilan emas, balki kelajakdagi quvonchli daqiqalar bilan ham sevmoqchiman.</p>
+<p>Pari, meni eshit, menga ishon. Senga bo‘lgan sevgim – bu shunchaki yuzaki emas, bu har kuni, har daqiqa yuragimda yashayotgan haqiqatdir.</p>
+<p>Men seni doim sevaman.</p>
+
+        </div>
+    </div>
+
+    <img src="rose.png" class="snow" style="left:10%; width:60px; animation-duration: 8s;">
+    <img src="rose.png" class="snow" style="left:30%; width:50px; animation-duration: 10s;">
+    <img src="rose.png" class="snow" style="left:50%; width:70px; animation-duration: 12s;">
+    <img src="rose.png" class="snow" style="left:70%; width:60px; animation-duration: 9s;">
+    <img src="rose.png" class="snow" style="left:90%; width:55px; animation-duration: 11s;">
+
+    <audio autoplay loop>
+        <source src="davosan.mp3" type="audio/mpeg">
+        Sizning brauzeringiz audio formatni qo‘llab-quvvatlamaydi.
+    </audio>
+
+    <script>
+        const paragraphs = document.querySelectorAll('.message p');
+        paragraphs.forEach((p, i) => {
+            p.style.setProperty('--delay', `${0.5 + i * 1.5}s`);
+        });
+    </script>
+</body>
+</html>
